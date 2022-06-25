@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff List</title>
+</head>
+
+<body>
+    <h1>Staff List</h1>    
+    {% for person in staff_list %}
+        <ul>
+            <!-- <h1>{{ person.employee_id }}</h1> -->
+            <li><a href="{% url 'school:staff_detail' person.employee_id %}">{{ person.name }}</a></li>
+            <!-- <li>{{ person.name }}</li> -->
+        </ul>
+    {% endfor %}
+</body>
+</html>
